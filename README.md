@@ -34,5 +34,4 @@ Lógica de servidor y bases de datos.
 * `/PHP-Exercises`: Ejercicios de sintaxis y conexión a BBDD.
 
 ---
-*Este repositorio está en continua actualización a medida que avanzo en el grado.*# DAW-Web-Development-Portfolio
-Colección de proyectos y prácticas Full Stack realizadas durante el Grado Superior en Desarrollo de Aplicaciones Web (DAW).
+*Este repositorio está en continua actualización a medida que avanzo en el grado.*

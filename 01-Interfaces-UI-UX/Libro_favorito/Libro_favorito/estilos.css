@@ -1,0 +1,57 @@
+body {
+  background-image: url("Outlander.jfif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Georgia", serif;
+  color: #1c1c1c;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 3px solid #7a5230;
+  border-radius: 15px;
+  width: 80%;
+  margin: 50px auto;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  color: #5c2e00;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+h2 {
+  text-align: center;
+  color: #7a5230;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+h3 {
+  color: #3e1f00;
+  border-bottom: 2px solid #7a5230;
+  padding-bottom: 5px;
+}
+
+.sinopsis {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 15px 0;
+}
+
+.resumen-largo {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+ol {
+  margin-left: 30px;
+}
+
+ol li {
+  font-style: italic;
+}

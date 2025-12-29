@@ -1,0 +1,76 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+$azul-mediterraneo: #008CA8; // Azul verdoso/petróleo 
+$arena-suave: #fdfbf7;       // Blanco roto cálido para el fondo
+
+// Sobreescribimos $primary
+$primary: $azul-mediterraneo;
+
+// Cambiamos la fuente por defecto 
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+
+
+.navbar {
+    background-color: white !important; // Forzamos fondo blanco
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); // Sombra suave inferior
+    
+    // Hacemos que los enlaces del menú sean un poco más grandes y oscuros
+    .nav-link {
+        font-weight: 500;
+        color: $gray-700;
+        
+        &:hover, &.active {
+            color: $primary; 
+        }
+    }
+}
+
+// Personalización del Título Principal (H1)
+.titulo-malaga {
+    color: $primary; // Usa el azul mediterráneo
+    font-weight: 800 !important; // Muy negrita
+    text-transform: uppercase; // Mayúsculas
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1); 
+    font-size: 3.5rem; // Grande
+    
+    // Ajuste para móvil
+    @include media-breakpoint-down(md) {
+        font-size: 2.5rem;
+    }
+}
+
+header{
+    background-color: $arena-suave; 
+}
+
+
+// Altura fija para imágenes de tarjetas
+.img-fija {
+    height: 200px; 
+    width: 100%;  
+    
+// Importante para que no se estire la imagen
+    object-fit: cover; 
+}
+
+// Ajustar la altura en móviles
+@media (max-width: 576px) {
+    .img-fija {
+        height: 150px; 
+    }
+}
+
+.carrusel-img-fija {
+    height: 700px; 
+    width: 100%;  
+
+    object-fit: cover; 
+}
+
+@media (max-width: 576px) {
+    .carrusel-img-fija {
+        height: 250px; /* Altura para pantallas de móvil */
+    }
+}

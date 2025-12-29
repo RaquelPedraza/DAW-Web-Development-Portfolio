@@ -1,0 +1,630 @@
+
+<!-- Objetivos de la práctica 
+• Aplicar correctamente el sistema de grid de Bootstrap (.container, .row, .col-*). 
+• Utilizar al menos 10 componentes o utilidades visuales de Bootstrap. 
+• Crear una interfaz responsive, moderna y visualmente atractiva. -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Málaga</title>
+    <!-- Enlazamos nuestro css con Bootstrap -->
+    <link rel="stylesheet" href="/sass/custom.css">
+  </head>
+
+  <body>
+    <!-- 1. PORTADA -->
+
+    <!-- 1. Portada/Inicio 
+      • Título principal (nombre ciudad) y subtítulos atractivos. 
+      • Carousel de 3 imágenes de la ciudad. 
+      • Menú de navegación en la esquina derecha para acceder a cada una de las 
+      secciones + dropdown oscuro al final para seleccionar el idioma de la página 
+      (mostrar 3 idiomas en el dropdown, no hay que hacer la traducción). -->
+    <nav class="navbar navbar-expand-lg"> <!-- meter dentro de header -->
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-tog5gler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto"> <!-- ESTO lo manda a la derecha -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Información general</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lugares</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Idioma
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Español</a></li>
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">Francaise</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Aplicamos color a toda la sección -->
+    <header class="text-center">
+      <!-- Hero Section con padding-->
+      <section class="city p-4">
+        <!-- Título principal -->
+        <h1 class="titulo-malaga text-center fw-bold mt-5 mb-4">
+          Málaga
+        </h1>
+        <!-- Descripción -->
+        <h2 class="h2">
+          Historia, cultura y belleza mediterránea. 
+        </h2>
+        <section class="carrusel-ciudad py-5">
+        <div class="container">
+
+          <div
+            id="carruselCiudad"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <!-- Indicadores inferiores (líneas que muestran la posición) -->
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carruselCiudad"
+                data-bs-slide-to="0"
+                class="active"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carruselCiudad"
+                data-bs-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carruselCiudad"
+                data-bs-slide-to="2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carruselCiudad"
+                data-bs-slide-to="3"
+              ></button>
+            </div>
+
+            <!-- Slides del carrusel -->
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <!-- Hacemos que el carrusel sea activo (cambie los slides de forma automática) -->
+              <div class="carousel-item active">
+                <!-- Aplicamos "width" a la imagen para que ocupe todo el ancho -->
+                <img
+                  src="assets/images/vista_puerto.jpeg"
+                  class="d-block w-100 carrusel-img-fija"
+                  alt="Vista hacia el puerto de Málaga"
+                />
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <img
+                  src="assets/images/alcazaba_ayto.jpg"
+                  class="d-block w-100 carrusel-img-fija"
+                  alt="Vista del ayuntamiento"
+                />
+              
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="carousel-item">
+                <img
+                  src="assets/images/calle_larios.jpg"
+                  class="d-block w-100 carrusel-img-fija"
+                  alt="Centro histórico"
+                />
+  
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="carousel-item">
+                <img
+                  src="assets/images/alameda.jpg"
+                  class="d-block w-100 carrusel-img-fija"
+                  alt="Parque de la Alameda"
+                />
+                
+              </div>
+            </div>
+
+            <!-- Controles (flechas) -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselProducto"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselProducto"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!-- 2. 
+        • Breve introducción (1–2 párrafos). 
+        • 3 tarjetas (card) con datos clave de la ciudad: población, año de fundación… -->
+      <!-- 2. SOBRE MÁLAGA 
+
+
+-->
+      <article class="container">
+        <p class="d-flex justify-content-center flex-wrap">
+          Málaga es una ciudad costera situada en el sur de España, en plena
+          Costa del Sol. Con un clima mediterráneo privilegiado, más de 300 días
+          de sol al año y un ambiente vibrante, combina historia, cultura y mar
+          en un mismo espacio. Es una ciudad donde conviven tradición y modernidad:
+          museos de prestigio, una gastronomía destacada y un puerto renovado.
+        </p>
+
+
+
+      </article>
+      <section class="d-flex justify-content-center flex-wrap gap-4 py-5">
+        <div class="card" style="width: 18rem;">
+          <img src="assets/images/poblacion.png" class="card-img-top img-fija" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">POBLACIÓN</h5>
+            <p class="card-text">Más de 580.000 habitantes, siendo la segunda ciudad más poblada de Andalucía y un importante centro económico y turístico del sur de España.</p>
+            
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="assets/images/fenicia.jpg" class="card-img-top img-fija" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">AÑO DE FUNDACIÓN</h5>
+            <p class="card-text">Fundada por los fenicios alrededor del siglo VIII a. C., Málaga es una de las ciudades con continuidad histórica más larga de Europa.</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="assets/images/alcazaba.jpg" class="card-img-top img-fija" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">LUGARES DESTACADOS</h5>
+            <p class="card-text">Su historia milenaria se concentra en la Alcazaba, el Teatro Romano y el Castillo de Gibralfaro. El Centro Histórico y Muelle Uno son sus pulsos modernos.</p>
+          </div>
+        </div>
+
+        
+<!-- 3. Lugares destacados (mín. 4) -->
+<section class="lugares bg-body-secondary p-3">
+  <h2 class="h2 text-center m-5">LUGARES IMPRESCINDIBLES</h2>
+  <div class="row row-cols-2 row-cols-md-4 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="assets/images/malaga_view.jpg" class="card-img-top img-fija" alt="...">
+        <div class="card-body">
+          <h5 class="card-title bg-secondary text-light py-2 px-3 m-0">Vista de la Alcazaba, la Catedral y la iglesia de San Agustín</h5>
+          <p class="card-text">La panorámica clásica de Málaga: combina la arquitectura histórica de la **Alcazaba** y la silueta de la **Catedral** (La Manquita), mostrando el corazón monumental de la ciudad.</p>        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <img src="assets/images/teatroromano.jpeg" class="card-img-top img-fija" alt="...">
+        <div class="card-body"> 
+          <h5 class="card-title w-100 bg-success text-light py-2 px-3 m-0">Teatro Romano y Alcazaba</h5>
+          <p class="card-text">Símbolo de la convivencia de culturas: el **Teatro Romano** (siglo I a.C.) y la fortaleza árabe de la **Alcazaba** se encuentran superpuestos, ofreciendo un viaje único a través de 20 siglos de historia.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="assets/images/muelle_uno.jpg" class="card-img-top img-fija" alt="...">
+        <div class="card-body">
+          <h5 class="card-title bg-primary text-light py-2 px-3 m-0">Muelle Uno y Palmeral</h5>
+          <p class="card-text">El paseo marítimo más moderno de Málaga, ideal para ocio, compras y gastronomía. Conecta la ciudad con el mar a través del **Palmeral de las Sorpresas** y ofrece vistas inmejorables de la bahía al atardecer.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="assets/images/gibralfaro-fortress.jpg" class="card-img-top img-fija" alt="...">
+        <div class="card-body">
+          <h5 class="card-title bg-danger text-light py-2 px-3 m-0">Gastillo de Gibralfaro</h5>
+          <p class="card-text">Antigua fortaleza fenicia convertida en castillo nazarí. Su principal atractivo es la **vista panorámica 360º** que ofrece de la ciudad, el puerto y la Costa del Sol.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 4. Gastronomía típica -->
+
+<div class="container">
+<section class="gastronomia my-5">
+  <div>
+    <row class="grid">
+      <col class="col-6">
+    
+        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Ver más
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-danger" href="#">Papas</a></li>
+              <li><a class="dropdown-item text-inf" href="#">Helados</a></li>
+            </ul>
+          </div>
+        </div>
+      </col>
+      <col class="">
+        <h2 class="h2 text-center pt-4">PLATOS TÍPICOS</h2>
+        <h3 class="h3 text-center pb-4">Málaga también se come...</h2>
+      </col>
+    </row>
+
+  
+</div>
+  <div class="card-group my-5">
+  <div class="card">
+    <img src="assets/images/espetos.jpg" class="card-img-top img-fija" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Espetos de Sardinas</h5>
+      <p class="card-text">La esencia de la cocina malagueña: sardinas ensartadas en cañas y asadas al fuego de leña en la arena. Un plato sencillo y obligatorio junto al mar. Se consumen mejor en los meses sin 'R'.</p>
+    </div>
+    
+  </div>
+  <div class="card">
+    <img src="assets/images/ensalada.jpg" class="card-img-top img-fija" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Ensalada Malagueña</h5>
+      <p class="card-text">Un plato refrescante y completo, ideal para el verano. Lleva patatas cocidas, bacalao desmigado, naranjas, aceitunas aloreñas, y huevo duro, aderezado con aceite de oliva.</p>
+    </div>
+    
+  </div>
+  <div class="card">
+    <img src="assets/images/campero.png" class="card-img-top img-fija" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Campero Malagueño</h5>
+      <p class="card-text">Un bocadillo caliente y circular, muy popular en Málaga. Se rellena típicamente de jamón, queso, pollo, lechuga y mayonesa, siempre servido con su inconfundible pan tostado.</p>
+    </div>
+    
+  </div>
+  <div class="card">
+    <img src="assets/images/plato_montes.jpg" class="card-img-top img-fija" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Plato de los Montes</h5>
+      <p class="card-text">Un plato de montaña contundente, perfecto para combatir el frío. Combina lomo en manteca, chorizo, morcilla, patatas fritas, huevo y pimientos. Ideal para compartir.</p>
+    </div>
+  </div>
+</div>
+  <h3 class="h3 text-center bg-success-subtle pt-4 pb-4">...y es muy dulce</h2>
+  <div class="card-group">
+  <div class="card">
+    <img src="assets/images/roscos-tipo-malaga.jpg" class="card-img-top img-fija" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Roscos de Vino</h5>
+      <p class="card-text">Dulce tradicional de la Navidad en Málaga, elaborado con harina, vino dulce, sésamo, canela y manteca de cerdo, con un acabado de azúcar glas. Se deshacen en la boca.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="assets/images/tortas-locas-malaga.jpg" class="card-img-top img-fija" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Tortas Locas</h5>
+      <p class="card-text">El dulce de pastelería más icónico de la ciudad. Son dos capas de hojaldre rellenas de crema pastelera y cubiertas con un glaseado de huevo y naranja. Muy fácil de encontrar.</p>
+    </div>
+    
+  </div>
+  <div class="card">
+    <img src="assets/images/borrachuelos-de-miel-malaga.jpg" class="card-img-top img-fija" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Borrachuelos de Miel</h5>
+      <p class="card-text">Dulce de sartén frito, aromatizado con anís, cáscara de naranja y especias. Su nombre viene de mojarlos en vino blanco antes de rebozarlos en miel o azúcar.</p>
+    </div>
+   
+  </div>
+  <div class="card">
+    <img src="assets/images/bienmesabe.png" class="card-img-top img-fija" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Bienmesabe</h5>
+      <p class="card-text">Postre de origen conventual, a base de almíbar, huevo y almendras molidas, a menudo con un toque de canela. Es típico de la provincia, especialmente en Antequera, y muy dulce.</p>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+
+<!-- 5. Transporte y acceso
+• Tabla responsive con al menos 3 filas (opciones: tren, autobús, coche).
+• Usar .table, .table-striped, .table-responsive. -->
+<div class="container">
+  <div class="table-responsive my-5">
+  
+  <table class="table table-striped table-bordered table-hover align-middle">
+    
+    <thead class="table-dark">
+      <tr>
+        <th>Destino</th> 
+        <th> Autobús (EMT)</th>
+        <th>Coche / Parking</th>
+        <th> Tren / Metro</th>
+        <th> Caminando</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      
+      <tr>
+        <th>Centro Histórico / Teatro Romano</th>
+        <td>Líneas hacia <strong>Alameda Principal</strong> o Paseo del Parque.</td>
+        <td>Difícil acceso. Usar Parking <strong>Plaza de la Marina</strong> o Alcazaba.</td>
+        <td>Cercanías C1 (Centro-Alameda) o Metro (Atarazanas).</td>
+        <td>Zona mayormente <strong>peatonal</strong> (Calle Larios).</td>
+      </tr>
+      
+      <tr>
+        <th>Muelle 1 (Puerto)</th>
+        <td>Paradas en <strong>Paseo del Parque</strong> (casi todas las líneas).</td>
+        <td>Parking subterráneo propio <strong>"Muelle Uno"</strong>.</td>
+        <td>15 min a pie desde estación Centro-Alameda.</td>
+        <td>Acceso directo desde el Palmeral de las Sorpresas.</td>
+      </tr>
+      
+      <tr>
+        <th>Castillo de Gibralfaro</th>
+        <td><strong>Línea 35</strong> (Sube directamente hasta la puerta).</td>
+        <td>Pequeño parking en la cima (se llena rápido).</td>
+        <td>No hay acceso directo (demasiada pendiente).</td>
+        <td>Subida empinada por sendero <strong>La Coracha</strong> (20-30 min).</td>
+      </tr>
+
+    </tbody> 
+  </table>
+</div>
+</div>
+
+<!-- Horarios y recomendaciones -->
+<section class="container py-5">
+  <div class="row g-5"> <div class="col-lg-6">
+      <h3 class="mb-4"><i class="bi bi-clock"></i> Horarios y Afluencia</h3>
+      
+      <div class="accordion accordion-flush shadow-sm border rounded" id="accordionHorarios">
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+              <strong>Centro Histórico y Catedral</strong>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionHorarios">
+            <div class="accordion-body">
+              <div class="d-flex align-items-center mb-3 text-muted">
+                <div class="spinner-border spinner-border-sm text-primary me-2" role="status"></div>
+                <small>Comprobando aforo...</small>
+              </div>
+              <div class="alert alert-warning py-2" role="alert">
+                <small> <strong>Atención:</strong> Sin visitas turísticas durante misas.</small>
+              </div>
+              <p class="mb-1 mt-2"><small>Recomendación: Ir temprano</small></p>
+              <div class="progress" style="height: 20px;">
+                <div class="progress-bar bg-success" style="width: 75%">75% recomienda 9:00 AM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+              <strong>Teatro Romano y Alcazaba</strong>
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionHorarios">
+            <div class="accordion-body">
+              <div class="d-flex align-items-center mb-3 text-muted">
+                <div class="spinner-border spinner-border-sm text-primary me-2" role="status"></div>
+                <small>Actualizando colas...</small>
+              </div>
+              <div class="alert alert-danger py-2" role="alert">
+                <small><i class="bi bi-clock-history"></i> Taquilla cierra 45min antes.</small>
+              </div>
+              <p class="mb-1 mt-2"><small>Ocupación mediodía</small></p>
+              <div class="progress" style="height: 20px;">
+                <div class="progress-bar bg-warning text-dark" style="width: 90%">90% Muy concurrido</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree">
+              <strong>Muelle 1 (Puerto)</strong>
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionHorarios">
+            <div class="accordion-body">
+              <div class="d-flex align-items-center mb-3 text-muted">
+                <div class="spinner-border spinner-border-sm text-primary me-2" role="status"></div>
+                <small>Actualizando...</small>
+              </div>
+              <div class="alert alert-info py-2" role="alert">
+                <small><i class="bi bi-info-circle"></i> Zona abierta 24h.</small>
+              </div>
+              <p class="mb-1 mt-2"><small>Mejor momento</small></p>
+              <div class="progress" style="height: 20px;">
+                <div class="progress-bar bg-info text-dark" style="width: 95%">95% elige atardecer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour">
+              <strong>Castillo de Gibralfaro</strong>
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionHorarios">
+            <div class="accordion-body">
+              <div class="d-flex align-items-center mb-3 text-muted">
+                <div class="spinner-border spinner-border-sm text-primary me-2" role="status"></div>
+                <small>Revisando tráfico...</small>
+              </div>
+              <div class="alert alert-dark py-2" role="alert">
+                <small><i class="bi bi-geo-alt-fill"></i> Subida a pie muy dura.</small>
+              </div>
+              <p class="mb-1 mt-2"><small>Preferencia acceso</small></p>
+              <div class="progress" style="height: 20px;">
+                <div class="progress-bar progress-bar-striped" style="width: 60%">60% sube en Bus 35</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- Preguntas Frecuentes -->
+
+    <div class="col-lg-6">
+      <h3 class="mb-4"> Preguntas Frecuentes</h3>
+      
+      <div class="list-group shadow-sm">
+        
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">¿Cuándo son gratuitos los museos?</h5>
+            <small>Ahorro</small>
+          </div>
+          <p class="mb-1">La mayoría de museos (Picasso, Pompidou, Thyssen) tienen entrada gratuita los <strong>domingos</strong> durante las últimas 2 horas de apertura.</p>
+        </a>
+
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">¿Es potable el agua del grifo?</h5>
+            <small class="text-muted">Salud</small>
+          </div>
+          <p class="mb-1">Sí, el agua de Málaga es totalmente potable y segura, aunque tiene un sabor fuerte debido a la alta concentración de cal (agua dura).</p>
+        </a>
+
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">¿Se deja propina en los bares?</h5>
+            <small class="text-muted">Cultura</small>
+          </div>
+          <p class="mb-1">No es obligatorio. Sin embargo, es costumbre dejar el "suelto" o redondear la cuenta si el servicio ha sido bueno (aprox. 5-10%).</p>
+        </a>
+
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">¿Dónde comprar la tarjeta de bus?</h5>
+            <small class="text-muted">Transporte</small>
+          </div>
+          <p class="mb-1">En estancos y kioscos de prensa. La tarjeta "Transbordo" permite cambiar de línea gratis durante una hora.</p>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+    </div>
+  </div>
+
+</div>
+
+<!-- 8. Pie de página
+• Información de contacto (dirección, teléfono, horario).
+• Enlaces a redes sociales con iconos o texto + badge (ej. <span class="badge bgdanger">
+Twitter</span>).
+• Uso de bg-dark text-white y centrado con d-flex justify-content-center.
+Requisitos Obligatorios: -->
+
+<footer class="bg-dark text-white py-5 mt-5">
+  <div class="container">
+    
+    <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+      
+      <h5 class="text-uppercase mb-3">Oficina de Turismo de Málaga</h5>
+      
+      <p class="mb-1">
+        <i class="bi bi-geo-alt-fill me-2"></i> Plaza de la Marina, 11, 29001 Málaga
+      </p>
+      
+      <p class="mb-1">
+        <i class="bi bi-telephone-fill me-2"></i> +34 951 92 60 20
+      </p>
+      
+      <p class="mb-0">
+        <i class="bi bi-clock-fill me-2"></i> Lun - Dom: 09:00 - 20:00
+      </p>
+      
+    </div>
+
+    <hr class="border-secondary">
+
+    <div class="d-flex justify-content-center gap-3 pt-3">
+      
+      <a href="#" class="text-decoration-none">
+        <span class="badge bg-danger p-2">
+           Twitter
+        </span>
+      </a>
+
+      <a href="#" class="text-decoration-none">
+        <span class="badge bg-primary p-2">
+           Facebook
+        </span>
+      </a>
+
+      <a href="#" class="text-decoration-none">
+        <span class="badge bg-warning text-dark p-2">
+           Instagram
+        </span>
+      </a>
+
+      <a href="#" class="text-decoration-none">
+        <span class="badge bg-danger p-2">
+           YouTube
+        </span>
+      </a>
+
+    </div>
+
+    <div class="text-center text-secondary mt-4">
+      <small>&copy; 2024 Guía de Málaga. Todos los derechos reservados.</small>
+    </div>
+
+  </div>
+</footer>
+    <!-- Enlazamos nuestro js con Bootstrap -->
+<!--     <script src="js/bootstrap.bundle.min.js"></script>
+ -->  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

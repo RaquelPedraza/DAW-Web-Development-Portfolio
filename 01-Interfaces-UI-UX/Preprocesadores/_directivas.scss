@@ -1,0 +1,34 @@
+/* Incluye las siguientes directivas:
+• Crea un @for para los testimonios (.testimonio-):
+o font-size: px-a-rem(12px + $i * 4);
+o margin: 8px 0;
+• Crea una condicional con @if/@else para el .body:
+o Si el $modo es oscuro, el fondo será $fondo-oscuro y el texto blanco.
+o Si el $modo es claro, el fondo será $fondo-claro y el texto negro.
+o En cualquier otro caso, el fondo será $fondo-neutro y el texto negro. */
+
+// "importamos las ------ variables y funciones
+@use 'variables' as *;
+@use 'funciones' as *;
+
+// @for para los testimonios (.testimonio-)
+.testimonio {
+  @for $i from 1 through 3 {
+  font-size: px-a-rem(12 + $i * 4);
+  margin: 8px 0;
+}
+}
+
+// @if/@else para el body
+body {
+  @if $modo == oscuro {
+  background-color: $fondo-oscuro;
+  color: $color-texto2;
+} @else if $modo == claro {
+  background-color: $fondo-claro;
+  color: $color-texto;
+} @else {
+  background-color: $fondo-neutro;
+  color: $color-texto;
+}
+}

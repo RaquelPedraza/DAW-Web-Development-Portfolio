@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/* Define al menos variables para: 
+• Colores principales: primario, secundario, rojo, fondo claro, fondo oscuro, fondo 
+neutro. 
+• Fuente principal y tamaño base (16px). 
+• Variable $modo con valor "oscuro" o "claro" para aplicar un esquema de color 
+condicional para el fondo del documento.  */
+/* Crea una función personalizada llamada px-a-rem($px) que:
+• Reciba un parámetro $px en píxeles.
+• Devuelva el valor convertido a rem (($px / 16px) * 1rem).
+• Se usará en font-size, márgenes y paddings. */
+/* Incluye el siguiente mixin:
+• boton($bg, $fg: white)
+o Aplica color de fondo ($bg) y texto($fg), padding, borde redondeado y efecto
+hover {filter: brightness(1.5)}.
+o Si $bg no está definido, genera un @error con un mensaje personalizado. */
+/* Incluye las siguientes directivas:
+• Crea un @for para los testimonios (.testimonio-):
+o font-size: px-a-rem(12px + $i * 4);
+o margin: 8px 0;
+• Crea una condicional con @if/@else para el .body:
+o Si el $modo es oscuro, el fondo será $fondo-oscuro y el texto blanco.
+o Si el $modo es claro, el fondo será $fondo-claro y el texto negro.
+o En cualquier otro caso, el fondo será $fondo-neutro y el texto negro. */
+.testimonio, .testimonio-1, .testimonio-2, .testimonio-3 {
+  font-size: px-a-rem(16px);
+  margin: 8px 0;
+  font-size: px-a-rem(20px);
+  margin: 8px 0;
+  font-size: px-a-rem(24px);
+  margin: 8px 0;
+}
+
+body {
+  background-color: #100605;
+  color: #938f8f;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: rgb(244, 243, 243);
+  color: black;
+}
+
+.cabecera {
+  text-align: center;
+  margin: auto;
+  margin-bottom: px-a-rem(30);
+}
+.cabecera .logo {
+  color: blue;
+  font-size: px-a-rem(28);
+  margin: 0 auto;
+}
+.cabecera .navegacion {
+  width: 100%;
+}
+.cabecera .navegacion ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+.cabecera .navegacion ul li a {
+  color: black;
+  text-decoration: none;
+}
+.cabecera .navegacion ul li a:hover {
+  color: blue;
+}
+
+.hero {
+  text-align: center;
+  background-color: white;
+  padding: px-a-rem(30);
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-titulo {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: px-a-rem(24);
+}
+
+.boton-primario {
+  background-color: blue;
+  color: white;
+  padding: px-a-rem(12px);
+  border: 2px solid darkgrey;
+  border-radius: 5px;
+}
+.boton-primario:hover {
+  filter: brightness(1.5);
+}
+
+.grid-destinos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.tarjeta-destino {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(18, 154, 38, 0.1);
+  padding: 16px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+img {
+  height: 150px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+.destino-precio {
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: 2px solid rgba(46, 204, 113, 0.4);
+  padding-bottom: 10px;
+}
+
+.boton-secundario {
+  background-color: #2ecc71;
+  color: white;
+  padding: px-a-rem(12px);
+  border: 2px solid darkgrey;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px;
+}
+.boton-secundario:hover {
+  filter: brightness(1.5);
+}
+
+.testimonio, .testimonio-3, .testimonio-2, .testimonio-1 {
+  padding: 12px;
+  margin: 6px;
+  font-weight: bold;
+  border-left: 4px solid transparent;
+}
+
+.seccion-titulo-1 {
+  text-align: center;
+  margin-top: 5px;
+  padding-top: 30px;
+  box-shadow: 0 -2px 0 rgba(60, 240, 63, 0.4);
+}
+
+.testimonio-1 {
+  color: #2ecc71;
+  border-left-color: #2ecc71;
+  background-color: rgb(127.704, 226.296, 169.512);
+  margin: 12px;
+}
+
+.testimonio-2 {
+  color: #e74c3c;
+  border-left-color: #e74c3c;
+  background-color: rgb(253.3561643836, 242.7397260274, 241.6438356164);
+  margin: 12px;
+}
+
+.testimonio-3 {
+  color: blue;
+  border-left-color: blue;
+  background-color: #ccccff;
+  margin: 12px;
+}
+
+.pie {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+a {
+  font-size: px-a-rem(16);
+}/*# sourceMappingURL=styles.css.map */

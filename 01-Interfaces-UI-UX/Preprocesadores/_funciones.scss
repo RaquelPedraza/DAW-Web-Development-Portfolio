@@ -1,0 +1,14 @@
+/* Crea una función personalizada llamada px-a-rem($px) que:
+• Reciba un parámetro $px en píxeles.
+• Devuelva el valor convertido a rem (($px / 16px) * 1rem).
+• Se usará en font-size, márgenes y paddings. */
+
+// Función para cambiar el tamaño de fuente, margen y paddingsass --watch styles.scss styles.css
+
+.font-size, 
+.margin,
+.padding {
+  @function px-a-rem($px) {
+  @return ($px / 16px) * 1rem;
+}
+}

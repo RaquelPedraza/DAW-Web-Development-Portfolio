@@ -1,0 +1,18 @@
+/* Incluye el siguiente mixin:
+• boton($bg, $fg: white)
+o Aplica color de fondo ($bg) y texto($fg), padding, borde redondeado y efecto
+hover {filter: brightness(1.5)}.
+o Si $bg no está definido, genera un @error con un mensaje personalizado. */
+
+@use 'funciones';
+
+// Mixin para .boton
+@mixin boton($bg, $fg: white) {
+  @if ($bg == null) { @error "El mixin 'boton' requiere un color de fondo no nulo."; }
+  background-color: $bg;
+  color: $fg;
+  padding: px-a-rem(12px);
+  border: 2px solid darkgrey;
+  border-radius: 5px;
+  &:hover { filter: brightness(1.5); }
+}

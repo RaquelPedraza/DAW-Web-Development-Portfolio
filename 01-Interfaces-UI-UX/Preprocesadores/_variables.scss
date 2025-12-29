@@ -1,0 +1,27 @@
+/* Define al menos variables para: 
+• Colores principales: primario, secundario, rojo, fondo claro, fondo oscuro, fondo 
+neutro. 
+• Fuente principal y tamaño base (16px). 
+• Variable $modo con valor "oscuro" o "claro" para aplicar un esquema de color 
+condicional para el fondo del documento.  */
+
+// === VARIABLES ===
+
+// Colores principales
+$color-texto: black;
+$color-texto2: #938f8f;
+$color-primario:   blue;
+$color-secundario: #2ecc71;
+$color-acento:   #e74c3c;
+
+// Fondos
+$fondo-claro:     white;
+$fondo-oscuro:     #100605;
+$fondo-neutro:    rgb(244, 243, 243);
+
+// Tipografía
+$fuente-principal: Arial, sans-serif;
+$tamano-base: 16px;
+
+// Modo de color
+$modo: oscuro; // Cambia entre 'oscuro' y 'claro'

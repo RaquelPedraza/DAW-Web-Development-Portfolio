@@ -1,0 +1,180 @@
+
+// Importamos todos los archivos con @use
+@use 'variables' as *;
+@use 'funciones' as *;
+@use 'mixins' as *;
+@use 'directivas' as *;
+@use "sass:color";
+
+
+// ___ BODY ___
+body {
+    font-family: $fuente-principal;
+    font-size: $tamano-base;
+    background-color: $fondo-neutro;
+    color: $color-texto;
+}
+
+// ___ CABECERA ANIDADA ___ 
+
+// Texto centrado y margen bottom 30px (convertido a rem) 
+.cabecera {
+  text-align: center;
+  margin: auto;
+  margin-bottom: px-a-rem(30); // Usamos '_funciones'
+
+    // Título (h1) 
+    .logo {
+    color: $color-primario;
+    font-size: px-a-rem(28);
+    margin: 0 auto;
+    }
+    // Menú de navegación horizontal (ul) centrado 
+    .navegacion{
+        // Aseguramos que el contenedor del menú ocupe todo el ancho disponible
+        width: 100%;
+
+        ul {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          list-style: none;
+          padding: 0;
+
+        // Enlace color negro y en hover cambia de color
+        li a {
+          color: $color-texto;
+          text-decoration: none;
+          
+          &:hover {
+            color: $color-primario;
+          }
+        }
+      }
+    }
+}
+
+// ___ SECCIÓN HERO ___
+
+.hero {
+    text-align: center; // Texto centrado
+    background-color: $fondo-claro;
+    padding: px-a-rem(30);
+    padding-top: 20px; // Paddings específicos para que tenga espacios como los de la img
+    padding-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); // Sombra exterior
+}
+
+// Título (h2) 
+.hero-titulo {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    font-size: px-a-rem(24);
+}
+
+// Botón estilizado con el mixin boton
+.boton-primario {
+    @include boton($color-primario);
+}
+
+
+// ___ SECCIÓN DESTINOS ___
+
+// Diseño en grid de 3 columnas 
+.grid-destinos {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+}
+
+// TARJETAS DE DESTINO 
+.tarjeta-destino {
+background-color: $fondo-claro;
+box-shadow: 0 4px 8px rgba(18, 154, 38, 0.1);
+padding: 16px;
+// Como no se especifica, no uso la función px-a-rem
+border-radius: 6px;
+text-align: center;
+}
+
+// Imagen con altura fija
+  img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover; // Importante para que la imagen se visualice bien
+    border-radius: 4px;
+  }
+
+// Precio 
+.destino-precio {
+    color: $color-primario;
+    font-weight: bold;
+    font-size: 20px;
+    // font-size: px-a-rem(20);
+    border-bottom: 2px solid rgba($color-secundario, 0.4); // Línea de separación verde tenue 
+    padding-bottom: 10px; 
+}
+
+// Botón secundario con mixin boton
+.boton-secundario {
+    @include boton($color-secundario);
+    width: 100%;
+    margin-top: 10px;
+    // margin-top: px-a-rem(10);
+}
+ 
+
+// ___ TESTIMONIOS ___
+
+// Usa @extend desde una clase base .testimonio:
+.testimonio {
+// Padding 12px, margen 6px y texto negrita.
+  padding: 12px;
+  margin: 6px;
+  font-weight: bold;
+  border-left: 4px solid transparent; // Preparamos los bordes de cada testimonio
+}
+
+.seccion-titulo-1 {
+  text-align: center;
+  margin-top: 5px;
+  padding-top: 30px;
+  // Sombra superior verde para dar el aspecto de la imagen
+  box-shadow: 0 -2px 0 rgba(60, 240, 63, 0.4);
+}
+
+// Cada testimonio tiene colores distintos
+// y border-left, fondo claro (lighten(..., 40%) DEPRECATED
+.testimonio-1 {
+    @extend .testimonio; 
+    color: $color-secundario;
+    border-left-color: $color-secundario;
+    background-color: color.scale($color-secundario, $lightness: 40%);
+    margin: 12px; 
+}
+.testimonio-2 {
+    @extend .testimonio;
+    color: $color-acento;
+    border-left-color: $color-acento;
+    background-color: color.adjust($color-acento, $lightness: 40%);
+    margin: 12px;
+}
+.testimonio-3 {
+    @extend .testimonio;
+    color: $color-primario;
+    border-left-color: $color-primario;
+    background-color: color.adjust($color-primario, $lightness: 40%);
+    margin: 12px;
+}
+
+// ___ FOOTER ___
+// Texto centrado y margen inferior 
+.pie {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+//Enlaces con tamaño de fuente de 16px (convertido a rem)
+a {
+    font-size: px-a-rem(16);
+}
